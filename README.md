@@ -7,7 +7,7 @@ Built with React, TypeScript, Tailwind CSS, and Vite.
 ## Run locally
 
 ```bash
-npm install
+npm install --force
 npm run dev
 ```
 
