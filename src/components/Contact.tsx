@@ -39,7 +39,7 @@ export function Contact() {
             <div className="space-y-4">
               <ContactLink
                 label="Email"
-                value={siteConfig.email}
+                value= "paul.udor@gmail.com"
                 href={`mailto:${siteConfig.email}`}
               />
               <ContactLink
@@ -47,7 +47,7 @@ export function Contact() {
                 value="linkedin.com/in/pauludor"
                 href={siteConfig.linkedin}
               />
-              <ContactLink label="GitHub" value="github.com/pauludor" href={siteConfig.github} />
+              <ContactLink label="GitHub" value="https://github.com/plexxypc/" href={siteConfig.github} />
             </div>
           </div>
 
