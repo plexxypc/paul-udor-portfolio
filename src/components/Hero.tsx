@@ -19,7 +19,7 @@ export function Hero() {
 
           <p className="mt-6 md:mt-8 text-base md:text-lg text-text-muted leading-relaxed max-w-3xl">
             I&apos;m {siteConfig.name}, a Web Developer based in {siteConfig.location}, with
-            hands-on experience in front-end development, WordPress, CMS implementation, website
+            hands-on experience in custom web development, WordPress, CMS implementation, website
             recovery, migration, performance optimization, technical SEO, and analytics.
           </p>
 
