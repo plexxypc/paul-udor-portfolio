@@ -16,12 +16,12 @@ import { AIMarketingOS } from './pages/AIMarketingOS'
 function App() {
   const [isProductPage, setIsProductPage] = useState(() => {
     if (typeof window === 'undefined') return false
-    return window.location.pathname === '/ai-marketing-os'
+    return window.location.pathname === './pages/ai-marketing-os'
   })
 
   useEffect(() => {
     const updateRoute = () => {
-      const nextValue = typeof window !== 'undefined' && window.location.pathname === '/ai-marketing-os'
+      const nextValue = typeof window !== 'undefined' && window.location.pathname === './pages/ai-marketing-os'
       setIsProductPage(Boolean(nextValue))
     }
 
