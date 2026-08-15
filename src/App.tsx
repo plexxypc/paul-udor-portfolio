@@ -16,21 +16,18 @@ import { ProductLandingPage } from './components/ProductLandingPage'
 function App() {
   const [isProductPage, setIsProductPage] = useState(() => {
     if (typeof window === 'undefined') return false
-    return window.location.hash === '#ai-marketing-os' || window.location.pathname.includes('ai-marketing-os')
+    return window.location.pathname === '/ai-marketing-os'
   })
 
   useEffect(() => {
     const updateRoute = () => {
-      const nextValue =
-        typeof window !== 'undefined' &&
-        (window.location.hash === '#ai-marketing-os' || window.location.pathname.includes('ai-marketing-os'))
-
+      const nextValue = typeof window !== 'undefined' && window.location.pathname === '/ai-marketing-os'
       setIsProductPage(Boolean(nextValue))
     }
 
     updateRoute()
-    window.addEventListener('hashchange', updateRoute)
-    return () => window.removeEventListener('hashchange', updateRoute)
+    window.addEventListener('popstate', updateRoute)
+    return () => window.removeEventListener('popstate', updateRoute)
   }, [])
 
   if (isProductPage) {

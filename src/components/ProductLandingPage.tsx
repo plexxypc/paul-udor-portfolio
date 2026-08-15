@@ -120,12 +120,12 @@ export function ProductLandingPage() {
     <div className="bg-background text-text">
       <header className="sticky top-0 z-30 border-b border-gold/20 bg-background/85 backdrop-blur-xl">
         <div className="product-container flex items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <a href="#home" className="text-sm uppercase tracking-[0.28em] text-ivory/90 transition-opacity hover:opacity-80">
+          <a href="/" className="text-sm uppercase tracking-[0.28em] text-ivory/90 transition-opacity hover:opacity-80">
             AI MARKETING OS
           </a>
           <nav className="hidden items-center gap-8 text-xs uppercase tracking-[0.22em] text-text-muted md:flex">
-            <a href="#home" className="transition-colors hover:text-ivory">Product</a>
-            <a href="#faq" className="transition-colors hover:text-ivory">FAQ</a>
+            <a href="/ai-marketing-os" className="transition-colors hover:text-ivory">Product</a>
+            <a href="#faq-accordion" className="transition-colors hover:text-ivory">FAQ</a>
             <a href={primaryCta} className="text-gold transition-colors hover:text-[#dcc08a]">
               Purchase
             </a>
@@ -134,7 +134,7 @@ export function ProductLandingPage() {
       </header>
 
       <main>
-        <section id="ai-marketing-os" className="section-padding pt-12 md:pt-18">
+        <section className="section-padding pt-12 md:pt-18">
           <div className="product-container">
             <div className="grid items-center gap-10 xl:grid-cols-[1.05fr_0.95fr]">
               <div>
@@ -537,7 +537,7 @@ export function ProductLandingPage() {
           </div>
         </section>
 
-        <section id="faq" className="section-padding border-t border-gold/10 py-20 md:py-24">
+        <section id="faq-accordion" className="section-padding border-t border-gold/10 py-20 md:py-24">
           <div className="product-container">
             <div className="mb-12 text-center">
               <h2 className="serif-display text-4xl leading-tight tracking-[-0.05em] text-ivory sm:text-5xl">
@@ -598,8 +598,8 @@ export function ProductLandingPage() {
               </p>
             </div>
             <div className="flex items-center gap-6 text-xs uppercase tracking-[0.22em] text-text-muted">
-              <a href="#product" className="transition-colors hover:text-gold">Product</a>
-              <a href="#faq" className="transition-colors hover:text-gold">FAQ</a>
+              <a href="/ai-marketing-os" className="transition-colors hover:text-gold">Product</a>
+              <a href="#faq-accordion" className="transition-colors hover:text-gold">FAQ</a>
               <a href={primaryCta} className="transition-colors hover:text-gold">Purchase</a>
             </div>
           </div>

@@ -39,7 +39,7 @@ export const projects: Project[] = [
       'A premium editorial landing page for AI Marketing OS: Content Engine, designed to position the product as a structured content marketing operating system for serious marketers.',
     tags: ['Landing Page', 'Editorial Design', 'Conversion', 'Product Marketing'],
     featured: false,
-    cta: { label: 'View Product', href: '#ai-marketing-os' },
+    cta: { label: 'View Product', href: '/ai-marketing-os' },
   },
   {
     id: 'project-3',
