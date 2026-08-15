@@ -11,7 +11,7 @@ import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { StructuredData } from './components/StructuredData'
-import { ProductLandingPage } from './components/ProductLandingPage'
+import { AIMarketingOS } from './pages/AIMarketingOS'
 
 function App() {
   const [isProductPage, setIsProductPage] = useState(() => {
@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   if (isProductPage) {
-    return <ProductLandingPage />
+    return <AIMarketingOS />
   }
 
   return (
