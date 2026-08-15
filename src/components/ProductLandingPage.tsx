@@ -124,7 +124,7 @@ export function ProductLandingPage() {
             AI MARKETING OS
           </a>
           <nav className="hidden items-center gap-8 text-xs uppercase tracking-[0.22em] text-text-muted md:flex">
-            <a href="#product" className="transition-colors hover:text-ivory">Product</a>
+            <a href="#home" className="transition-colors hover:text-ivory">Product</a>
             <a href="#faq" className="transition-colors hover:text-ivory">FAQ</a>
             <a href={primaryCta} className="text-gold transition-colors hover:text-[#dcc08a]">
               Purchase
@@ -134,7 +134,7 @@ export function ProductLandingPage() {
       </header>
 
       <main>
-        <section id="product" className="section-padding pt-12 md:pt-18">
+        <section id="home" className="section-padding pt-12 md:pt-18">
           <div className="product-container">
             <div className="grid items-center gap-10 xl:grid-cols-[1.05fr_0.95fr]">
               <div>
