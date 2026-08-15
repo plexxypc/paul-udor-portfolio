@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { SelectedWork } from './components/SelectedWork'
@@ -10,8 +11,32 @@ import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import { StructuredData } from './components/StructuredData'
+import { ProductLandingPage } from './components/ProductLandingPage'
 
 function App() {
+  const [isProductPage, setIsProductPage] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.location.hash === '#ai-marketing-os' || window.location.pathname.includes('ai-marketing-os')
+  })
+
+  useEffect(() => {
+    const updateRoute = () => {
+      const nextValue =
+        typeof window !== 'undefined' &&
+        (window.location.hash === '#ai-marketing-os' || window.location.pathname.includes('ai-marketing-os'))
+
+      setIsProductPage(Boolean(nextValue))
+    }
+
+    updateRoute()
+    window.addEventListener('hashchange', updateRoute)
+    return () => window.removeEventListener('hashchange', updateRoute)
+  }, [])
+
+  if (isProductPage) {
+    return <ProductLandingPage />
+  }
+
   return (
     <>
       <StructuredData />
