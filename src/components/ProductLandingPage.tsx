@@ -120,11 +120,11 @@ export function ProductLandingPage() {
     <div className="bg-background text-text">
       <header className="sticky top-0 z-30 border-b border-gold/20 bg-background/85 backdrop-blur-xl">
         <div className="product-container flex items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
-          <a href="/" className="text-sm uppercase tracking-[0.28em] text-ivory/90 transition-opacity hover:opacity-80">
+          <a href="#" className="text-sm uppercase tracking-[0.28em] text-ivory/90 transition-opacity hover:opacity-80">
             AI MARKETING OS
           </a>
           <nav className="hidden items-center gap-8 text-xs uppercase tracking-[0.22em] text-text-muted md:flex">
-            <a href="/ai-marketing-os" className="transition-colors hover:text-ivory">Product</a>
+            <a href="#ai-marketing-os" className="transition-colors hover:text-ivory">Product</a>
             <a href="#faq-accordion" className="transition-colors hover:text-ivory">FAQ</a>
             <a href={primaryCta} className="text-gold transition-colors hover:text-[#dcc08a]">
               Purchase
@@ -598,7 +598,7 @@ export function ProductLandingPage() {
               </p>
             </div>
             <div className="flex items-center gap-6 text-xs uppercase tracking-[0.22em] text-text-muted">
-              <a href="/ai-marketing-os" className="transition-colors hover:text-gold">Product</a>
+              <a href="#ai-marketing-os" className="transition-colors hover:text-gold">Product</a>
               <a href="#faq-accordion" className="transition-colors hover:text-gold">FAQ</a>
               <a href={primaryCta} className="transition-colors hover:text-gold">Purchase</a>
             </div>
