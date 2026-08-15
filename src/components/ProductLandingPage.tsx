@@ -134,7 +134,7 @@ export function ProductLandingPage() {
       </header>
 
       <main>
-        <section id="home" className="section-padding pt-12 md:pt-18">
+        <section id="ai-marketing-os" className="section-padding pt-12 md:pt-18">
           <div className="product-container">
             <div className="grid items-center gap-10 xl:grid-cols-[1.05fr_0.95fr]">
               <div>
