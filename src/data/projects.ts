@@ -1,3 +1,9 @@
+import edvImage from '../assets/edv.png'
+import calderaImage from '../assets/caldera.png'
+import intelfortImage from '../assets/intelfort.png'
+import ssdigitalImage from '../assets/ssdigital.png'
+
+
 export interface Project {
   id: string
   title: string
@@ -12,7 +18,7 @@ export const projects: Project[] = [
     id: 'emporium-de-vogue',
     title: 'Emporium De Vogue',
     url: 'https://emporiumdevogue.com/',
-    image: 'public/projects/edv.png',
+    image: edvImage,
     category: 'Fashion · E-commerce',
     description:
       'An e-commerce store for made-to-order female garments that celebrate African culture, class, and individuality, using textiles like Akwete, Aso-Oke, and Adire.',
@@ -21,7 +27,7 @@ export const projects: Project[] = [
     id: 'caldera-stores',
     title: 'Caldera Stores',
     url: 'https://calderastores.com/',
-    image: 'public/projects/caldera.png',
+    image: calderaImage,
     category: 'Phone Repair · Accessories',
     description:
       'A phone repair and accessory shop located across different cities in the South-Western and Northern parts of Nigeria.',
@@ -30,7 +36,7 @@ export const projects: Project[] = [
     id: 'intelfort',
     title: 'Intelfort',
     url: 'https://intelfortng.com/',
-    image: 'public/projects/intelfort.png',
+    image: intelfortImage,
     category: 'Data Analytics',
     description:
       'A Lagos-based data analytics company handling big data for various institutions in Nigeria and overseas.',
@@ -39,7 +45,7 @@ export const projects: Project[] = [
     id: 'ss-digital-solutions',
     title: 'SS Digital Solutions',
     url: 'https://ssdigitalsolutions.com/',
-    image: 'public/projects/ssdigital.png',
+    image: ssdigitalImage,
     category: 'Digital Development Agency',
     description:
       'A digital development agency focusing on web development, automation, and marketing.',
