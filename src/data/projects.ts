@@ -1,52 +1,56 @@
 export interface Project {
   id: string
   title: string
-  category: string
+  url: string
+  image: string
+  category?: string
   description: string
-  tags: string[]
-  featured?: boolean
-  caseStudy?: boolean
-  placeholder?: boolean
-  cta?: { label: string; href: string }
 }
 
 export const projects: Project[] = [
   {
+    id: 'emporium-de-vogue',
+    title: 'Emporium De Vogue',
+    url: 'https://emporiumdevogue.com/',
+    image: '/src/assets/edv.png',
+    category: 'Fashion · E-commerce',
+    description:
+      'An e-commerce store for made-to-order female garments that celebrate African culture, class, and individuality, using textiles like Akwete, Aso-Oke, and Adire.',
+  },
+  {
+    id: 'caldera-stores',
+    title: 'Caldera Stores',
+    url: 'https://calderastores.com/',
+    image: '/src/assets/caldera.png',
+    category: 'Phone Repair · Accessories',
+    description:
+      'A phone repair and accessory shop located across different cities in the South-Western and Northern parts of Nigeria.',
+  },
+  {
+    id: 'intelfort',
+    title: 'Intelfort',
+    url: 'https://intelfortng.com/',
+    image: '/src/assets/intelfort.png',
+    category: 'Data Analytics',
+    description:
+      'A Lagos-based data analytics company handling big data for various institutions in Nigeria and overseas.',
+  },
+  {
+    id: 'ss-digital-solutions',
+    title: 'SS Digital Solutions',
+    url: 'https://ssdigitalsolutions.com/',
+    image: '/src/assets/ssdigital.png',
+    category: 'Digital Development Agency',
+    description:
+      'A digital development agency focusing on web development, automation, and marketing.',
+  },
+  {
     id: 'dsa-lagos',
     title: 'DSA Lagos',
-    category: 'Website Recovery · WordPress · SEO · Performance',
+    url: 'https://dsalagos.com/',
+    image: '/projects/dsa-lagos.webp',
+    category: 'Fashion',
     description:
-      'Recovered and rebuilt a compromised WordPress website for a Lagos fashion brand, including migration, DNS and SSL configuration, security cleanup, Elementor reconstruction, mobile performance optimization, and technical/local SEO.',
-    tags: [
-      'WordPress',
-      'Elementor',
-      'Hostinger',
-      'GTmetrix',
-      'Ahrefs',
-      'Google Search Console',
-      'GA4',
-      'Technical SEO',
-    ],
-    featured: true,
-    caseStudy: true,
-    cta: { label: 'View Case Study', href: '#case-study' },
-  },
-  {
-    id: 'ai-marketing-os',
-    title: 'AI Marketing OS',
-    category: 'Premium Product Landing Page · Notion Product',
-    description:
-      'A premium editorial landing page for AI Marketing OS: Content Engine, designed to position the product as a structured content marketing operating system for serious marketers.',
-    tags: ['Landing Page', 'Editorial Design', 'Conversion', 'Product Marketing'],
-    featured: false,
-    cta: { label: 'View Product', href: '#ai-marketing-os' },
-  },
-  {
-    id: 'project-3',
-    title: 'Landing Page Build',
-    category: 'Front-End · Performance',
-    description: 'Project coming soon — a custom landing page with performance-focused implementation.',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'SEO'],
-    placeholder: true,
+      'A fashion brand providing evening dresses, bridal dresses, and elegant styles for premium clients.',
   },
 ]
