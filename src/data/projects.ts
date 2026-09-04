@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 'emporium-de-vogue',
     title: 'Emporium De Vogue',
     url: 'https://emporiumdevogue.com/',
-    image: '/src/assets/edv.png',
+    image: '/assets/edv.png',
     category: 'Fashion · E-commerce',
     description:
       'An e-commerce store for made-to-order female garments that celebrate African culture, class, and individuality, using textiles like Akwete, Aso-Oke, and Adire.',
