@@ -7,6 +7,7 @@ import BlogIndexPage from "./pages/BlogIndexPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProjectPage from "./pages/ProjectPage";
+import WorkIndexPage from "./pages/WorkIndexPage";
 
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 
@@ -27,6 +28,7 @@ export default function App() {
         <Suspense fallback={<div className="container page" aria-busy="true" />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/work" element={<WorkIndexPage />} />
             <Route path="/work/:project_id" element={<ProjectPage />} />
             <Route path="/blog" element={<BlogIndexPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
