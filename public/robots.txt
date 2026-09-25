@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://pauludor.com/sitemap.xml
