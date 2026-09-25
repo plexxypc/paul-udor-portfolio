@@ -7,7 +7,7 @@ tags: [building-in-public, ai, automation, marketing, saas]
 
 I've spent a lot of time working on other people's projects.
 
-Writing content. Building websites. Improving SEO. Managing digital marketing. Testing AI tools. Setting up automations. Helping businesses figure out how to get more customers online.
+Writing content. Building websites. Improving SEO. Managing digital marketing campaigns. Testing AI tools. Setting up automations. Helping businesses figure out how to get more customers online.
 
 But lately, I've become more interested in something else:
 

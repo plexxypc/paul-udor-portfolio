@@ -20,6 +20,7 @@ In PowerShell, pass Vite flags with `npx vite --port 5173`. `npm run dev -- --po
 | --- | --- |
 | Name, title, bio, email, socials | `src/data/profileData.js` |
 | Case studies | `src/data/projectsData.js` |
+| Previous websites (screenshot cards) | `src/data/websitesData.js`, images in `src/assets/work/` |
 | Blog posts | `src/content/blog/*.md` |
 | Resume PDF | `public/resume/paul-udor-resume.pdf` (path set by `resume_url` in `profileData.js`) |
 | Colours, fonts, spacing | `src/styles/tokens.css` |
