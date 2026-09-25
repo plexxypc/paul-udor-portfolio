@@ -1,0 +1,57 @@
+/*
+ * Design tokens. Dark is the reference palette; light is a "blueprint paper"
+ * counterpart — cool off-white, never cream. The accent is a signal light:
+ * status dots, focus rings, the active nav marker, and the hero lines only.
+ * Vanta line/background colours in HeroBackground.jsx mirror --accent and --bg.
+ */
+
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #14171c;
+  --surface: #1b1f26;
+  --text: #edeef0;
+  --text_muted: #8a93a3;
+  --accent: #f2a94f;
+  --line: #2a2f38;
+  --line_strong: #3b424e;
+  --grid: rgb(138 147 163 / 0.055);
+  --scrim_strong: rgb(20 23 28 / 0.94);
+  --scrim_soft: rgb(20 23 28 / 0.35);
+  --danger: #f08a7e;
+  --success: #8fd19e;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #eef1f5;
+  --surface: #f8f9fb;
+  --text: #14171c;
+  --text_muted: #505968;
+  --accent: #b86e12;
+  --line: #d4dae3;
+  --line_strong: #aab3c0;
+  --grid: rgb(20 23 28 / 0.05);
+  --scrim_strong: rgb(238 241 245 / 0.95);
+  --scrim_soft: rgb(238 241 245 / 0.4);
+  --danger: #b3261e;
+  --success: #1e7a3a;
+}
+
+:root {
+  --font_sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font_mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --container_width: 1080px;
+  --container_padding: 24px;
+  --radius: 4px;
+  --port_size: 9px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container_padding: 18px;
+  }
+}

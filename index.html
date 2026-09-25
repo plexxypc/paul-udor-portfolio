@@ -1,49 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary Meta Tags -->
-    <title>Paul Udor | Web Developer in Lagos, Nigeria</title>
-    <meta
-      name="description"
-      content="Paul Udor is a Web Developer specializing in front-end development, WordPress, website recovery, performance optimization, technical SEO, and analytics."
-    />
-    <meta name="author" content="Paul Udor" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://pauludor.com/" />
-
-    <!-- Open Graph -->
+    <meta name="color-scheme" content="dark light" />
+    <title>{{profile_name}} — {{profile_title}}</title>
+    <meta name="description" content="{{profile_description}}" />
+    <meta property="og:title" content="{{profile_name}} — {{profile_title}}" />
+    <meta property="og:description" content="{{profile_description}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pauludor.com/" />
-    <meta property="og:title" content="Paul Udor | Web Developer in Lagos, Nigeria" />
-    <meta
-      property="og:description"
-      content="Paul Udor is a Web Developer specializing in front-end development, WordPress, website recovery, performance optimization, technical SEO, and analytics."
-    />
-    <meta property="og:locale" content="en_NG" />
-    <meta property="og:site_name" content="Paul Udor Portfolio" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Paul Udor | Web Developer in Lagos, Nigeria" />
-    <meta
-      name="twitter:description"
-      content="Paul Udor is a Web Developer specializing in front-end development, WordPress, website recovery, performance optimization, technical SEO, and analytics."
-    />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Runs before first paint so there is no flash of the wrong theme.
+      // Must stay in sync with THEME_STORAGE_KEY in src/theme/theme_context.js.
+      (function apply_initial_theme() {
+        var root_element = document.documentElement;
+        try {
+          var stored_theme = window.localStorage.getItem("theme");
+          if (stored_theme === "light" || stored_theme === "dark") {
+            root_element.dataset.theme = stored_theme;
+            return;
+          }
+          var prefers_light = window.matchMedia("(prefers-color-scheme: light)").matches;
+          root_element.dataset.theme = prefers_light ? "light" : "dark";
+        } catch (error) {
+          root_element.dataset.theme = "dark";
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="padding: 24px; font-family: sans-serif">
+        This site needs JavaScript to render. You can reach {{profile_name}} at
+        <a href="mailto:{{profile_email}}">{{profile_email}}</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
