@@ -73,6 +73,7 @@
   border-radius: var(--radius);
   background: var(--surface);
   color: var(--text);
+  font-family: var(--font_sans);
   font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
@@ -98,7 +99,6 @@
   gap: 5px;
   min-height: 32px;
   padding: 0 8px;
-  font-family: var(--font_sans);
   font-size: 0.8125rem;
 }
 
@@ -719,7 +719,7 @@
   color: var(--text_muted);
 }
 
-.resume_card_actions {
+.resume_actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -740,7 +740,7 @@
 }
 
 @media (max-width: 520px) {
-  .resume_card_actions .button {
+  .resume_actions .button {
     width: 100%;
   }
 }
@@ -929,6 +929,128 @@
   .case_header {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
+  }
+}
+
+/* ---------- About ---------- */
+
+.about_story {
+  display: grid;
+  gap: 18px;
+}
+
+.skill_grid,
+.principle_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill_group,
+.principle {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.skill_group_title,
+.principle_title {
+  margin-bottom: 14px;
+  font-size: 1.0625rem;
+}
+
+.principle_title {
+  margin-bottom: 8px;
+}
+
+.principle_detail {
+  color: var(--text_muted);
+}
+
+.skill_group .tag {
+  white-space: normal;
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline_entry {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 8px 24px;
+  padding-block: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.timeline_entry:first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+.timeline_dates {
+  padding-top: 3px;
+  color: var(--text_muted);
+}
+
+.timeline_role {
+  font-size: 1.1875rem;
+}
+
+.timeline_company {
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.timeline_description {
+  margin-top: 8px;
+  max-width: 66ch;
+  color: var(--text_muted);
+}
+
+.faq_list {
+  display: grid;
+  gap: 0;
+}
+
+.faq_entry {
+  padding-block: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.faq_entry:first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+.faq_question {
+  font-size: 1.125rem;
+}
+
+.faq_answer {
+  margin-top: 8px;
+  max-width: 70ch;
+  color: var(--text_muted);
+}
+
+.about .spec_row {
+  grid-template-columns: 60px minmax(0, 1fr);
+}
+
+@media (max-width: 720px) {
+  .skill_grid,
+  .principle_grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timeline_entry {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

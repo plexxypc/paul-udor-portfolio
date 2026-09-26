@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 import TagList from "../components/TagList";
-import { useDocumentTitle } from "../hooks/use_document_title";
+import Seo from "../components/Seo";
 import { get_post_by_slug } from "../utils/blog";
 import NotFoundPage from "./NotFoundPage";
 
@@ -30,14 +30,18 @@ const MARKDOWN_COMPONENTS = { a: MarkdownLink };
 export default function BlogPostPage() {
   const { slug } = useParams();
   const post = get_post_by_slug(slug);
-  useDocumentTitle(post ? post.title : "Not found");
-
   if (!post) {
     return <NotFoundPage />;
   }
 
   return (
     <article className="container page post">
+      <Seo
+        title={post.title}
+        description={post.excerpt || post.title}
+        path={`/blog/${post.slug}`}
+        og_type="article"
+      />
       <Link to="/blog" className="back_link">
         &larr; All writing
       </Link>

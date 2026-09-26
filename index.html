@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark light" />
     <title>{{profile_name}} — {{profile_title}}</title>
-    <meta name="description" content="{{profile_description}}" />
-    <meta property="og:title" content="{{profile_name}} — {{profile_title}}" />
-    <meta property="og:description" content="{{profile_description}}" />
-    <meta property="og:type" content="website" />
+    <!-- Fallback head for crawlers that don't run JavaScript. main.jsx removes
+         everything marked data-static-head before each route's <Seo> renders. -->
+    <meta name="description" content="{{profile_description}}" data-static-head />
+    <link rel="canonical" href="{{site_url}}" data-static-head />
+    <meta property="og:site_name" content="{{profile_name}}" data-static-head />
+    <meta property="og:title" content="{{profile_name}} — {{profile_title}}" data-static-head />
+    <meta property="og:description" content="{{profile_description}}" data-static-head />
+    <meta property="og:type" content="website" data-static-head />
+    <meta property="og:url" content="{{site_url}}" data-static-head />
+    <meta name="twitter:card" content="summary" data-static-head />
+    <meta name="twitter:title" content="{{profile_name}} — {{profile_title}}" data-static-head />
+    <meta name="twitter:description" content="{{profile_description}}" data-static-head />
+    <script type="application/ld+json">{{person_json_ld}}</script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script>
       // Runs before first paint so there is no flash of the wrong theme.

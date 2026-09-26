@@ -11,6 +11,7 @@ import ThemeToggle from "./ThemeToggle";
 
 /** @type {nav_item[]} */
 const NAV_ITEMS = [
+  { label: "About", to: "/about", active_prefix: "/about" },
   { label: "Work", to: "/#work", active_prefix: "/work" },
   { label: "Writing", to: "/blog", active_prefix: "/blog" },
   ...(profile.resume_url ? [{ label: "Resume", to: "/#resume", active_prefix: null }] : []),

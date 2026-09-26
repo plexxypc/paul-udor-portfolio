@@ -1,5 +1,5 @@
 import PostList from "../components/PostList";
-import { useDocumentTitle } from "../hooks/use_document_title";
+import Seo from "../components/Seo";
 import { all_posts } from "../utils/blog";
 
 /**
@@ -8,10 +8,13 @@ import { all_posts } from "../utils/blog";
  * @returns {import("react").JSX.Element} Page content.
  */
 export default function BlogIndexPage() {
-  useDocumentTitle("Writing");
-
   return (
     <div className="container page">
+      <Seo
+        title="Writing"
+        description="Posts by Paul Udor on the products, systems, and experiments he's building across AI, marketing, automation, and the web."
+        path="/blog"
+      />
       <header className="page_header">
         <h1 className="page_heading">Writing</h1>
         <p className="page_header_meta mono">

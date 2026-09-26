@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import ScrollManager from "./components/ScrollManager";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
+import AboutPage from "./pages/AboutPage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -28,6 +29,7 @@ export default function App() {
         <Suspense fallback={<div className="container page" aria-busy="true" />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/work" element={<WorkIndexPage />} />
             <Route path="/work/:project_id" element={<ProjectPage />} />
             <Route path="/blog" element={<BlogIndexPage />} />

@@ -14,11 +14,20 @@
  */
 
 /**
+ * @typedef {Object} skill_group
+ * @property {string} category - Group heading.
+ * @property {string[]} items - Skills and tools in the group.
+ */
+
+/**
  * @typedef {Object} profile_data
+ * @property {string} site_url - Production origin, no trailing slash. Used for canonical URLs, Open Graph, sitemap, and schema.
  * @property {string} name - Full name.
  * @property {string} title - Professional title shown under the hero heading.
  * @property {string} tagline - Optional one-line hero statement. Empty string hides it.
  * @property {string} bio - Short bio used in the hero and meta description.
+ * @property {string[]} story - Paragraphs for the About page's background section.
+ * @property {skill_group[]} skills - Skills grouped by category; also feeds Person schema `knowsAbout`.
  * @property {string} email - Contact address; also the FormSubmit destination.
  * @property {string} location - Optional location. Empty string hides it.
  * @property {string[]} focus_areas - Disciplines listed in the hero spec panel.
@@ -31,14 +40,69 @@
 
 /** @type {profile_data} */
 export const profile = {
+  // REPLACE_ME (confirm): taken from the GitHub profile. Must match the deployed domain.
+  // public/robots.txt and public/llms.txt repeat it and need the same edit.
+  site_url: "https://pauludor.com",
   name: "Paul Udor",
   title: "Marketing Specialist, Automation Engineer & Web Developer",
   // REPLACE_ME (optional): a first-person one-liner for the hero. While empty,
   // the hero heading falls back to your name.
   tagline: "",
-  bio: "Paul Udor is a multidisciplinary digital professional, strategist, and builder with experience spanning digital marketing, SEO, content, web development, and emerging technology.",
+  bio: "Paul Udor is an SEO content strategist and web developer based in Lagos, Nigeria. He writes search-led content for sports and iGaming brands, builds websites, and automates content workflows with n8n.",
+  story: [
+    "Paul started as a web developer. While studying Telecommunication Engineering at the University of Ilorin, he built websites for Unizone Group, then earned freeCodeCamp's front-end certification. From 2018 he freelanced for SS Digital Solution, building and maintaining client sites on WordPress, HubSpot, and OpenCart with SEO built into the page structure.",
+    "Writing grew alongside the code. He wrote for Topcontent, co-founded the content agency Hustle Writers, and led content and digital at Intelfort Nigeria, managing a team of four across more than ten client accounts. Since 2022 he has specialised in SEO content for sports betting and iGaming, first with Knup Solution and Revpanda, and now as a football betting writer for Goal.",
+    "His current work combines the two: search-led content grounded in keyword research and performance data, and automation systems, built with tools like n8n, that take the repetitive parts of a workflow off a person's plate while leaving the final decisions with them.",
+  ],
+  skills: [
+    {
+      category: "Content Strategy & Execution",
+      items: [
+        "Article Production",
+        "Sales Copywriting",
+        "Campaign Scripting",
+        "SEO-Friendly Content Creation",
+        "iGaming Content (Casino/Slot Reviews)",
+        "Sports Content",
+        "Technical Documentation Translation",
+        "Advertising/Marketing Copy",
+        "Case Studies",
+        "Email Campaigns/Newsletters",
+      ],
+    },
+    {
+      category: "SEO & Analytics",
+      items: [
+        "In-depth Keyword Research",
+        "Organic Ranking Optimization",
+        "Content Audit",
+        "A/B Testing Strategies",
+        "Performance Reporting (KPIs)",
+        "Competitor Analysis",
+      ],
+    },
+    {
+      category: "AI Tools",
+      items: ["ChatGPT/OpenAI", "Jasper", "Notion", "Make", "n8n", "Hugging Face APIs", "Claude"],
+    },
+    {
+      category: "Web Development (Front-End/CMS)",
+      items: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "jQuery",
+        "AJAX",
+        "JSON",
+        "WordPress",
+        "HubSpot",
+        "OpenCart",
+        "Front-End Architecture",
+      ],
+    },
+  ],
   email: "paul.udor@gmail.com",
-  location: "",
+  location: "Lagos, Nigeria",
   focus_areas: ["digital marketing", "SEO", "content", "web development", "automation"],
   tools: ["n8n", "WordPress"],
   open_to: ["direct hire", "automation builds"],
@@ -51,3 +115,13 @@ export const profile = {
     { label: "Facebook", handle: "paul.udor", url: "https://www.facebook.com/paul.udor/" },
   ],
 };
+
+/**
+ * Build an absolute URL on the production site.
+ *
+ * @param {string} path - Site-relative path beginning with "/".
+ * @returns {string} Absolute URL.
+ */
+export function to_absolute_url(path) {
+  return `${profile.site_url}${path}`;
+}
