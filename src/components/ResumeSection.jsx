@@ -1,6 +1,6 @@
 import { profile } from "../data/profileData";
-import DownloadIcon from "./DownloadIcon";
 import NodeHeader from "./NodeHeader";
+import ResumeActions from "./ResumeActions";
 
 /**
  * Resume node on the homepage: download the PDF or open it in the browser.
@@ -23,15 +23,7 @@ export default function ResumeSection() {
             Experience, skills, and background in one document, for hiring managers and teams scoping a build.
           </p>
         </div>
-        <div className="resume_card_actions">
-          <a className="button button_primary" href={profile.resume_url} download={profile.resume_file_name}>
-            <DownloadIcon />
-            Download resume
-          </a>
-          <a className="button" href={profile.resume_url} target="_blank" rel="noreferrer">
-            View in browser &#8599;
-          </a>
-        </div>
+        <ResumeActions is_primary_download />
         <p className="resume_card_file mono" aria-hidden="true">
           {profile.resume_file_name}
         </p>

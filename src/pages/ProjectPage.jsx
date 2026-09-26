@@ -5,7 +5,7 @@ import PipelineConnector from "../components/PipelineConnector";
 import SpecPanel from "../components/SpecPanel";
 import TagList from "../components/TagList";
 import { get_project_by_id } from "../data/projectsData";
-import { useDocumentTitle } from "../hooks/use_document_title";
+import Seo from "../components/Seo";
 import NotFoundPage from "./NotFoundPage";
 
 /**
@@ -50,14 +50,13 @@ function build_spec_rows(project) {
 export default function ProjectPage() {
   const { project_id } = useParams();
   const project = get_project_by_id(project_id);
-  useDocumentTitle(project ? project.title : "Not found");
-
   if (!project) {
     return <NotFoundPage />;
   }
 
   return (
     <article className="container page case_study">
+      <Seo title={project.title} description={project.summary} path={`/work/${project.id}`} og_type="article" />
       <Link to="/#work" className="back_link">
         &larr; All work
       </Link>

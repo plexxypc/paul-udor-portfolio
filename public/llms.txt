@@ -1,0 +1,38 @@
+# Paul Udor
+
+> Paul Udor is a marketing specialist, automation engineer, and web developer based in Lagos, Nigeria. He works across content strategy, SEO, web development, and automation systems built with tools such as n8n and Make. He is looking for direct-hire roles and for contract work building automation systems for teams and businesses.
+
+## What he does
+
+- Content: articles, sales and advertising copy, campaign scripts, email campaigns and newsletters, case studies, SEO-focused content, iGaming and sports content, and technical documentation translation.
+- SEO and analytics: keyword research, organic ranking optimization, content audits, A/B testing, competitor analysis, and KPI reporting.
+- Automation and AI: n8n and Make workflows using OpenAI (ChatGPT), Claude, Jasper, Notion, and Hugging Face APIs. Example: the AI Job Alert System, a config-driven n8n pipeline that finds job listings and drafts applications for a person to review before sending.
+- Web development: HTML, CSS, JavaScript, jQuery, WordPress (including Elementor and WooCommerce), HubSpot, OpenCart, and Vite/React front ends.
+
+## Experience
+
+- Football Betting Writer, Goal (remote), February 2025 to present.
+- SEO iGaming Content Strategist, Revpanda (remote), December 2022 to July 2026.
+- Sport and Gambling Writer, Knup Solution LLC (remote), January 2022 to March 2025.
+- Content and Digital Manager, Intelfort Nigeria Ltd (Lagos), December 2020 to December 2021.
+- DevOps Lead and Co-founder, Hustle Writers, March 2019 to December 2020.
+- Freelance Writer, Topcontent (remote), August 2018 to June 2021.
+- Freelance Web Developer, SS Digital Solution, March 2018 to December 2020.
+- Web Developer, Unizone Group, November 2014 to March 2019.
+
+## Education
+
+- BSc Telecommunication Engineering, University of Ilorin, 2013 to 2018.
+- freeCodeCamp Front-End Development Certification, 2018.
+
+## Pages
+
+- [About](https://pauludor.com/about): background, skills, experience, working principles, and FAQ.
+- [Work](https://pauludor.com/work): automation case studies and websites he built or worked on.
+- [Blog](https://pauludor.com/blog): posts on what he is building.
+
+## Contact
+
+- Email: paul.udor@gmail.com
+- GitHub: https://github.com/plexxypc
+- LinkedIn: https://www.linkedin.com/in/paul-udor/

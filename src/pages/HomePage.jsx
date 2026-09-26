@@ -10,7 +10,7 @@ import WebsiteGrid from "../components/WebsiteGrid";
 import { profile } from "../data/profileData";
 import { projects } from "../data/projectsData";
 import { featured_websites, websites } from "../data/websitesData";
-import { useDocumentTitle } from "../hooks/use_document_title";
+import Seo from "../components/Seo";
 import { all_posts, get_recent_posts } from "../utils/blog";
 import { format_count } from "../utils/format";
 
@@ -23,11 +23,11 @@ const RECENT_POST_COUNT = 3;
  * @returns {import("react").JSX.Element} Page content.
  */
 export default function HomePage() {
-  useDocumentTitle(null);
   const recent_posts = get_recent_posts(RECENT_POST_COUNT);
 
   return (
     <>
+      <Seo title={null} description={profile.bio} path="/" />
       <HeroSection />
 
       <div className="container">

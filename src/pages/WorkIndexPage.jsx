@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 import WebsiteGrid from "../components/WebsiteGrid";
 import { projects } from "../data/projectsData";
 import { websites } from "../data/websitesData";
-import { useDocumentTitle } from "../hooks/use_document_title";
+import Seo from "../components/Seo";
 import { format_count } from "../utils/format";
 
 /**
@@ -13,10 +13,13 @@ import { format_count } from "../utils/format";
  * @returns {import("react").JSX.Element} Page content.
  */
 export default function WorkIndexPage() {
-  useDocumentTitle("Work");
-
   return (
     <div className="container page">
+      <Seo
+        title="Work"
+        description="Automation case studies and websites built or worked on by Paul Udor, including n8n pipelines, React sites, and WordPress/WooCommerce stores."
+        path="/work"
+      />
       <header className="page_header">
         <h1 className="page_heading">Work</h1>
         <p className="page_header_meta mono">
@@ -28,7 +31,7 @@ export default function WorkIndexPage() {
       <section className="pipeline_section" aria-labelledby="case_studies_heading">
         <NodeHeader
           heading_id="case_studies_heading"
-          title="Case studies"
+          title="AI Case studies"
           meta={format_count(projects.length, "case study", "case studies")}
         />
         <ul className="project_list">

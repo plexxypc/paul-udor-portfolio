@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { profile } from "../data/profileData";
-import DownloadIcon from "./DownloadIcon";
 import HeroBackground from "./HeroBackground";
+import ResumeActions from "./ResumeActions";
 import SpecPanel from "./SpecPanel";
 
 /**
@@ -12,36 +12,6 @@ import SpecPanel from "./SpecPanel";
  */
 function join_values(values) {
   return values.join(" · ");
-}
-
-/**
- * Compact resume download / view buttons for the profile.config readout.
- *
- * @returns {import("react").JSX.Element} Button group.
- */
-function ResumeActions() {
-  return (
-    <span className="spec_actions">
-      <a
-        className="button button_small"
-        href={profile.resume_url}
-        download={profile.resume_file_name}
-        aria-label="Download resume (PDF)"
-      >
-        <DownloadIcon size={14} />
-        Download
-      </a>
-      <a
-        className="button button_small"
-        href={profile.resume_url}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="View resume in browser (opens in a new tab)"
-      >
-        View in browser &#8599;
-      </a>
-    </span>
-  );
 }
 
 /**
@@ -59,7 +29,7 @@ export default function HeroSection() {
     { key: "tools", value: join_values(profile.tools) },
     ...(profile.location ? [{ key: "location", value: profile.location }] : []),
     { key: "open_to", value: join_values(profile.open_to), is_signal: true },
-    ...(profile.resume_url ? [{ key: "resume", value: <ResumeActions /> }] : []),
+    ...(profile.resume_url ? [{ key: "resume", value: <ResumeActions size="small" /> }] : []),
     { key: "contact", value: <a href={`mailto:${profile.email}`}>{profile.email}</a> },
   ];
 
